@@ -84,7 +84,7 @@
   const bio = $('[data-bio]'); if (bio) bio.textContent = data.profile.bio;
   const portrait = $('#profilePortrait');
   if (portrait) {
-    portrait.innerHTML = `<img src="assets/images/suhail-saeedy-about.webp" alt="${esc(data.profile.name)}" loading="lazy" />`;
+    portrait.innerHTML = `<img src="assets/images/suhail-saeedy-about-v2.webp" alt="${esc(data.profile.name)}" loading="lazy" />`;
     portrait.classList.add('has-photo');
   }
   const heroCount = $('#projectCountHero'); if (heroCount) heroCount.textContent = String(publicProjects.length).padStart(2,'0');
