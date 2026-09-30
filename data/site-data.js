@@ -395,5 +395,6 @@ window.SUHAIL_LABS_DATA = {
       "videos": [],
       "note": "The realistic wallpapers are photorealistic artwork or user-selected imagery. Live-video export depends on browser support; the original still image remains available when video recording is unavailable.",
       "enabled": true
+    }
   ]
 };
