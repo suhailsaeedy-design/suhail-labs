@@ -83,8 +83,8 @@
   $$('[data-name]').forEach(el => el.textContent = data.profile.name);
   const bio = $('[data-bio]'); if (bio) bio.textContent = data.profile.bio;
   const portrait = $('#profilePortrait');
-  if (portrait && /^(?:https?:\/\/|data:image\/(?:jpeg|png|webp);base64,)/i.test(data.profile.avatar || '')) {
-    portrait.innerHTML = `<img src="${esc(data.profile.avatar)}" alt="${esc(data.profile.name)}" loading="lazy" referrerpolicy="no-referrer" />`;
+  if (portrait) {
+    portrait.innerHTML = `<img src="assets/images/suhail-saeedy-about.webp" alt="${esc(data.profile.name)}" loading="lazy" />`;
     portrait.classList.add('has-photo');
   }
   const heroCount = $('#projectCountHero'); if (heroCount) heroCount.textContent = String(publicProjects.length).padStart(2,'0');
