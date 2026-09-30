@@ -356,6 +356,44 @@ window.SUHAIL_LABS_DATA = {
       "videos": [],
       "note": "Portfolio and small-workspace inventory demo. Data is stored in this browser, not a production server database. Camera scanning depends on browser support for BarcodeDetector and camera permission; manual barcode/SKU entry is always available.",
       "enabled": true
-    }
+    },
+    {
+      "id": "006",
+      "slug": "006-suhail-live-wallpapers",
+      "title": "Suhail Live Wallpapers",
+      "category": "WEB",
+      "categoryLabel": "PWA / Live Wallpapers / Creative Web",
+      "focusAreas": [
+        "WEB",
+        "TOOLS"
+      ],
+      "summary": "A free installable wallpaper PWA with realistic photo wallpapers, scene-specific live motion, favorites, offline app shell and still or live-video export.",
+      "description": "Suhail Live Wallpapers is a responsive Progressive Web App for browsing and previewing phone wallpapers. Its realistic collection keeps the base photograph fixed while applying localized live effects such as water shimmer, rain, snow, petals, aurora, mist, firelight, birds and other scene-appropriate motion. Visitors can save the original still image or export a short live video where browser recording is supported, and the app can be added to a phone Home Screen without an app-store account.",
+      "status": "Published",
+      "featured": true,
+      "live": "https://suhailsaeedy-design.github.io/suhail-live-wallpapers/",
+      "liveLabel": "Open wallpapers",
+      "download": "",
+      "source": "https://github.com/suhailsaeedy-design/suhail-live-wallpapers",
+      "detailsUrl": "project.html?id=006",
+      "highlights": [
+        "75-wallpaper catalog with realistic images prioritized first",
+        "Installable PWA for phones and desktop browsers",
+        "Scene-specific live motion without moving or warping the whole photograph",
+        "Still-image download plus live-video export where the browser supports Canvas recording",
+        "Favorites, category filtering, search and responsive preview",
+        "Light and Dark themes",
+        "Offline application shell with online wallpaper catalog refresh",
+        "Public source repository and no paid API requirement"
+      ],
+      "learning": [
+        "Explore how a static website can behave like an installable mobile app using PWA technology",
+        "Study Canvas-based localized animation layered over fixed photographic backgrounds",
+        "See how service-worker updates can keep an installed Home Screen app current",
+        "Review browser-based media export, responsive design and offline-shell patterns"
+      ],
+      "videos": [],
+      "note": "The realistic wallpapers are photorealistic artwork or user-selected imagery. Live-video export depends on browser support; the original still image remains available when video recording is unavailable.",
+      "enabled": true
   ]
 };
