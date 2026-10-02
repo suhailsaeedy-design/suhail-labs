@@ -384,7 +384,8 @@ window.SUHAIL_LABS_DATA = {
         "Favorites, category filtering, search and responsive preview",
         "Light and Dark themes",
         "Offline application shell with online wallpaper catalog refresh",
-        "Public source repository and no paid API requirement"
+        "Public source repository and no paid API requirement",
+        "Animated About page with the approved Suhail Saeedy creator portrait"
       ],
       "learning": [
         "Explore how a static website can behave like an installable mobile app using PWA technology",
@@ -407,8 +408,8 @@ window.SUHAIL_LABS_DATA = {
         "WEB",
         "TOOLS"
       ],
-      "summary": "A cinematic realistic Earth-and-space explorer with NASA satellite imagery, live earthquakes and natural events, weather, a textured Solar System, the Moon, nearby galaxies and star fly-to views.",
-      "description": "EarthPulse 3D combines a realistic textured Three.js Earth with a free NASA GIBS satellite surface explorer. Visitors can orbit the globe, open recent VIIRS true-color or Blue Marble imagery, search locations, inspect current USGS earthquakes and NASA EONET events, request Open-Meteo weather only after intentional selection, explore textured planets and the Moon, and fly toward visualized galaxy and star destinations.",
+      "summary": "A free installable Earth-and-space PWA with realistic 3D Earth, NASA satellite imagery, live events and weather, a textured Solar System, the Moon, galaxies and offline core exploration.",
+      "description": "EarthPulse 3D combines a realistic textured Three.js Earth with a free NASA GIBS satellite surface explorer. It can be installed to a phone Home Screen, keeps its 3D Earth/System/Moon/Galaxy core available offline, checks for app updates when the device reconnects, includes an About panel with the Suhail Saeedy creator portrait, and still provides live USGS, NASA EONET and Open-Meteo data whenever internet access is available.",
       "status": "Published",
       "featured": true,
       "live": "https://suhail-earthpulse-3d.onrender.com",
@@ -432,7 +433,11 @@ window.SUHAIL_LABS_DATA = {
         "Light and Night themes with responsive mobile and desktop glassmorphism UI",
         "iPhone/WebKit-tested bundled runtime, adaptive rendering and reduced-motion support",
         "One-tap cinematic tour and native mobile sharing",
-        "No database, paid API or private browser-side API key is required"
+        "No database, paid API or private browser-side API key is required",
+        "Installable PWA with Add to Home Screen guidance for iPhone and install prompts where supported",
+        "Offline core caches the 3D Earth, Solar System, Moon, Galaxy, About page, interface and local space textures",
+        "Automatic release checks refresh installed apps after the device reconnects to the internet",
+        "About panel with the approved Suhail Saeedy creator portrait and Suhail Labs attribution"
       ],
       "learning": [
         "Explore how Three.js can combine textured globes, planetary models, particle galaxies, raycasting and cinematic camera motion",
