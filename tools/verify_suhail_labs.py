@@ -121,7 +121,7 @@ for profile in data.get("profile",{}).get("profiles",[]):
         fail(f"Profile {profile.get('name')}: public URL exists but handle is still a placeholder")
 projects=data.get("projects",[])
 ids=[str(p.get("id","")) for p in projects]
-if ids!=["001","002","003","004","005","006"]: fail(f"project IDs/order must be 001–006, got {ids}")
+if ids!=["001","002","003","004","005","006","007"]: fail(f"project IDs/order must be 001–007, got {ids}")
 if len(ids)!=len(set(ids)): fail("project IDs must be unique")
 def safe_public_url(value,allow_relative=True):
     value=str(value or "").strip()
