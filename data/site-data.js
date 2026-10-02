@@ -395,6 +395,47 @@ window.SUHAIL_LABS_DATA = {
       "videos": [],
       "note": "The realistic wallpapers are photorealistic artwork or user-selected imagery. Live-video export depends on browser support; the original still image remains available when video recording is unavailable.",
       "enabled": true
+    },
+    {
+      "id": "007",
+      "slug": "007-earthpulse-3d",
+      "title": "EarthPulse 3D",
+      "category": "3D",
+      "categoryLabel": "Interactive 3D / Live Earth / Space",
+      "focusAreas": [
+        "3D",
+        "WEB",
+        "TOOLS"
+      ],
+      "summary": "A cinematic browser-based 3D Earth and galaxy explorer with current earthquakes, open natural events, click-anywhere weather, location search and featured-star fly-to views.",
+      "description": "EarthPulse 3D combines an interactive Three.js globe with public live-data feeds and a cinematic space experience. Visitors can orbit and zoom Earth, inspect current USGS earthquakes and NASA EONET natural events, search cities and countries, tap the globe for Open-Meteo weather, switch between Light and Night themes, and enter a procedural galaxy to fly toward featured stars such as Sirius, Vega, Betelgeuse and Proxima Centauri.",
+      "status": "Published",
+      "featured": true,
+      "live": "https://suhail-earthpulse-3d.onrender.com",
+      "liveLabel": "Open EarthPulse 3D",
+      "download": "",
+      "source": "https://github.com/suhailsaeedy-design/suhail-earthpulse-3d",
+      "detailsUrl": "project.html?id=007",
+      "highlights": [
+        "Interactive Three.js Earth with atmospheric glow, orbit, touch controls and smooth cinematic camera movement",
+        "Current 24-hour earthquake feed from the USGS with magnitude, depth, time and source details",
+        "Open natural-event feed from NASA EONET with wildfire, storm, volcano and other available event categories",
+        "Open-Meteo current weather from searched locations or points selected directly on the globe",
+        "Procedural galaxy and star field with featured-star fly-to and close-up scientific visualizations",
+        "Featured stars include Sirius, Vega, Betelgeuse and Proxima Centauri",
+        "Light and Night themes with responsive glassmorphism controls for mobile and desktop",
+        "No database, paid API or private browser-side API key is required",
+        "Live-source failures are shown as partial/offline states instead of being replaced with invented events"
+      ],
+      "learning": [
+        "Explore how WebGL and Three.js can turn geospatial data into an interactive 3D experience",
+        "See how multiple public APIs can be normalized into one live event interface",
+        "Study camera fly-to, globe coordinate conversion, raycasting and touch-friendly 3D controls",
+        "Review a fully static cloud-hosted architecture that remains useful without a database or paid backend"
+      ],
+      "videos": [],
+      "note": "Live Earth information follows the upstream public USGS, NASA EONET and Open-Meteo feeds and can be temporarily incomplete when a source is unavailable. Galaxy and close-up star views are scientific visualizations for exploration and are not live telescope or camera footage; display positions and sizes are not spatially to scale.",
+      "enabled": true
     }
   ]
 };
