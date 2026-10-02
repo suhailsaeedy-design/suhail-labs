@@ -427,7 +427,11 @@ window.SUHAIL_LABS_DATA = {
         "Featured stars include Sirius, Vega, Betelgeuse and Proxima Centauri",
         "Light and Night themes with responsive glassmorphism controls for mobile and desktop",
         "No database, paid API or private browser-side API key is required",
-        "Live-source failures are shown as partial/offline states instead of being replaced with invented events"
+        "Live-source failures are shown as partial/offline states instead of being replaced with invented events",
+        "One-tap cinematic tour that automatically moves from Earth to a live event, the Solar System and featured stars for demos and screen recording",
+        "Native mobile sharing with clipboard fallback",
+        "Adaptive rendering for mobile devices plus reduced-motion support",
+        "Installable/offline application shell while live feeds remain online-only"
       ],
       "learning": [
         "Explore how WebGL and Three.js can turn geospatial and astronomy concepts into an interactive 3D experience",
