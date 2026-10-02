@@ -191,7 +191,8 @@
     }
     if (/speed|wifi|wi-fi|download|upload|latency|jitter/.test(q)) { const x=publicProjects.find(p=>p.id==='004'); return x?`${x.title}: ${x.summary}`:'The network diagnostics project is not published yet.'; }
     if (/inventory|barcode|stock|sku/.test(q)) { const x=publicProjects.find(p=>p.id==='005'); return x?`${x.title}: ${x.summary}`:'The inventory project is not published yet.'; }
-    if (/3d|network|topology/.test(q)) { const x=publicProjects.find(p=>p.category==='3D'); return x?`${x.title}: ${x.summary}`:'No 3D project is published yet.'; }
+    if (/earthpulse|earthquake|galaxy|stars?|space explorer|natural event|live earth/.test(q)) { const x=publicProjects.find(p=>p.id==='007'); return x?`${x.title}: ${x.summary}`:'EarthPulse 3D is not listed yet.'; }
+    if (/3d|network|topology/.test(q)) { const x=publicProjects.find(p=>p.id==='007') || publicProjects.find(p=>p.category==='3D'); return x?`${x.title}: ${x.summary}`:'No 3D project is published yet.'; }
     if (/medical|dictionary|anatomy|pwa/.test(q)) { const x=publicProjects.find(p=>/medical dictionary/i.test(p.title)); return x?`${x.title}: ${x.summary}`:'The medical dictionary project is not listed yet.'; }
     if (/download|source|code/.test(q)) return `Projects with downloads: ${publicProjects.filter(p=>p.download).map(p=>`Project ${p.id} — ${p.title}`).join('; ')}.`;
     if (/what.*build|skills|service|special|capabil|technolog/.test(q)) return `${data.profile.name} focuses on websites, software, databases, AI integration, business systems, admin/analytics, automation tools and interactive 3D experiences.`;
