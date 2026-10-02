@@ -407,8 +407,8 @@ window.SUHAIL_LABS_DATA = {
         "WEB",
         "TOOLS"
       ],
-      "summary": "A cinematic browser-based 3D Earth and galaxy explorer with current earthquakes, open natural events, click-anywhere weather, location search and featured-star fly-to views.",
-      "description": "EarthPulse 3D combines an interactive Three.js globe with public live-data feeds and a cinematic space experience. Visitors can orbit and zoom Earth, inspect current USGS earthquakes and NASA EONET natural events, search cities and countries, tap the globe for Open-Meteo weather, switch between Light and Night themes, and enter a procedural galaxy to fly toward featured stars such as Sirius, Vega, Betelgeuse and Proxima Centauri.",
+      "summary": "A cinematic browser-based 3D Earth, Solar System and galaxy explorer with current earthquakes, open natural events, click-anywhere weather, location search, animated planets and featured-star fly-to views.",
+      "description": "EarthPulse 3D combines an interactive Three.js globe with public live-data feeds and a cinematic space experience. Visitors can orbit and zoom Earth, inspect current USGS earthquakes and NASA EONET natural events, search cities and countries, tap the globe for Open-Meteo weather, switch between Light and Night themes, enter an animated Solar System with all eight planets, and travel through a procedural galaxy toward featured stars such as Sirius, Vega, Betelgeuse and Proxima Centauri.",
       "status": "Published",
       "featured": true,
       "live": "https://suhail-earthpulse-3d.onrender.com",
@@ -421,6 +421,8 @@ window.SUHAIL_LABS_DATA = {
         "Current 24-hour earthquake feed from the USGS with magnitude, depth, time and source details",
         "Open natural-event feed from NASA EONET with wildfire, storm, volcano and other available event categories",
         "Open-Meteo current weather from searched locations or points selected directly on the globe",
+        "Animated Solar System mode with the Sun, eight planets, orbit paths and planet fly-to close-ups",
+        "Planet reference cards for orbital distance, diameter, year length and moon count",
         "Procedural galaxy and star field with featured-star fly-to and close-up scientific visualizations",
         "Featured stars include Sirius, Vega, Betelgeuse and Proxima Centauri",
         "Light and Night themes with responsive glassmorphism controls for mobile and desktop",
@@ -428,13 +430,13 @@ window.SUHAIL_LABS_DATA = {
         "Live-source failures are shown as partial/offline states instead of being replaced with invented events"
       ],
       "learning": [
-        "Explore how WebGL and Three.js can turn geospatial data into an interactive 3D experience",
+        "Explore how WebGL and Three.js can turn geospatial and astronomy concepts into an interactive 3D experience",
         "See how multiple public APIs can be normalized into one live event interface",
-        "Study camera fly-to, globe coordinate conversion, raycasting and touch-friendly 3D controls",
+        "Study camera fly-to, globe coordinate conversion, raycasting, orbit animation and touch-friendly 3D controls",
         "Review a fully static cloud-hosted architecture that remains useful without a database or paid backend"
       ],
       "videos": [],
-      "note": "Live Earth information follows the upstream public USGS, NASA EONET and Open-Meteo feeds and can be temporarily incomplete when a source is unavailable. Galaxy and close-up star views are scientific visualizations for exploration and are not live telescope or camera footage; display positions and sizes are not spatially to scale.",
+      "note": "Live Earth information follows the upstream public USGS, NASA EONET and Open-Meteo feeds and can be temporarily incomplete when a source is unavailable. Solar System spacing, planet display sizes, galaxy layout and close-up star views are educational visualizations rather than a spatially to-scale simulation or live telescope/camera feed.",
       "enabled": true
     }
   ]
