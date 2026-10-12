@@ -1,0 +1,40 @@
+name: Test Open Source Native Pashto Voice
+on:
+  push:
+    branches: ['experiment/free-pashto-voice-2026']
+  pull_request:
+    branches: ['main']
+permissions:
+  contents: read
+jobs:
+  native-voice:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install free CPU native Pashto model
+        run: |
+          python -m pip install --quiet coqui-tts huggingface_hub 'numpy<2'
+      - name: Fetch trained Pashto voices and synthesize
+        env:
+          COQUI_TOS_AGREED: "1"
+          HF_HUB_DISABLE_XET: "1"
+        run: |
+          python - <<'PY'
+          from huggingface_hub import snapshot_download
+          from pathlib import Path
+          import subprocess,sys,os
+          mid="Nasimbahar/pashto-ghag-yourtts"
+          model=Path(snapshot_download(mid, allow_patterns=['best_model.pth','config.json','speakers.pth','model_se.pth','config_se.json','KNOWN_SPEAKERS.json','hf_infer_pashto_ghag_yourtts.py']))
+          print("Files:", [(p.name,p.stat().st_size) for p in model.iterdir() if p.is_file()],flush=True)
+          subprocess.run([sys.executable,str(model/'hf_infer_pashto_ghag_yourtts.py'),'--model-dir',str(model),'--text','سلامونه. نن د ځیګر د ناروغۍ او ویلسن ناروغۍ په اړه یو طبي درس لرو.','--speaker-id','speaker_01_nasim_bahar','--output-wav','native_pashto_trial.wav'],check=True,timeout=300)
+          PY
+          ffmpeg -hide_banner -loglevel error -i native_pashto_trial.wav -codec:a libmp3lame -b:a 96k native_pashto_trial.mp3
+          ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1 native_pashto_trial.mp3
+      - uses: actions/upload-artifact@v4
+        with:
+          name: native-pashto-voice-test
+          path: native_pashto_trial.mp3
+          retention-days: 3
