@@ -1,0 +1,29 @@
+name: Pashto Voice Free TTS Test
+on:
+  push:
+    branches: ['experiment/free-pashto-voice-2026']
+  pull_request:
+    branches: ['main']
+permissions:
+  contents: read
+jobs:
+  synthesize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install free speech synthesis
+        run: python -m pip install edge-tts
+      - name: Generate public domain sample
+        shell: bash
+        run: |
+          edge-tts --voice ps-AF-GulNawazNeural --text 'سلامونه. نن به د ویلسن ناروغۍ په اړه خبرې وکړو. د ځیګر روغتیا ډېره مهمه ده.' --write-media pashto_neural_trial.mp3
+          test -s pashto_neural_trial.mp3
+          ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1 pashto_neural_trial.mp3
+      - uses: actions/upload-artifact@v4
+        with:
+          name: free-pashto-neural-trial
+          path: pashto_neural_trial.mp3
+          retention-days: 3
