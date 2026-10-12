@@ -1,0 +1,26 @@
+name: Test Native Pashto Model API
+on:
+  push:
+    branches: ['experiment/free-pashto-voice-2026']
+  pull_request:
+    branches: ['main']
+permissions:
+  contents: read
+jobs:
+  api-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install Gradio Client
+        run: python -m pip install --quiet gradio_client
+      - name: Inspect running native Pashto model
+        run: |
+          python - <<'PY'
+          from gradio_client import Client
+          c=Client("Nasimbahar/pashtoai-tts")
+          api=c.view_api()
+          print("API INFORMATION:", api, flush=True)
+          PY
