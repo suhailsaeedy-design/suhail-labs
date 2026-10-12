@@ -30,7 +30,11 @@ jobs:
           mid="Nasimbahar/pashto-ghag-yourtts"
           model=Path(snapshot_download(mid, allow_patterns=['best_model.pth','config.json','speakers.pth','model_se.pth','config_se.json','KNOWN_SPEAKERS.json','hf_infer_pashto_ghag_yourtts.py']))
           print("Files:", [(p.name,p.stat().st_size) for p in model.iterdir() if p.is_file()],flush=True)
-          subprocess.run([sys.executable,str(model/'hf_infer_pashto_ghag_yourtts.py'),'--model-dir',str(model),'--text','سلامونه. نن د ځیګر د ناروغۍ او ویلسن ناروغۍ په اړه یو طبي درس لرو.','--speaker-id','speaker_01_nasim_bahar','--output-wav','native_pashto_trial.wav'],check=True,timeout=300)
+          from TTS.tts.utils.text import cleaners
+          cleaners.pashto_grapheme_cleaners = lambda t: ' '.join(t.split())
+          import runpy
+          sys.argv = [str(model/'hf_infer_pashto_ghag_yourtts.py'),'--model-dir',str(model),'--text','سلامونه. نن د ځیګر د ناروغۍ او ویلسن ناروغۍ په اړه یو طبي درس لرو.','--speaker-id','speaker_01_nasim_bahar','--output-wav','native_pashto_trial.wav']
+          runpy.run_path(str(model/'hf_infer_pashto_ghag_yourtts.py'), run_name='__main__')
           PY
           ffmpeg -hide_banner -loglevel error -i native_pashto_trial.wav -codec:a libmp3lame -b:a 96k native_pashto_trial.mp3
           ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1 native_pashto_trial.mp3
