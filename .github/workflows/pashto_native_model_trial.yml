@@ -30,6 +30,11 @@ jobs:
           mid="Nasimbahar/pashto-ghag-yourtts"
           model=Path(snapshot_download(mid, allow_patterns=['best_model.pth','config.json','speakers.pth','model_se.pth','config_se.json','KNOWN_SPEAKERS.json','hf_infer_pashto_ghag_yourtts.py']))
           print("Files:", [(p.name,p.stat().st_size) for p in model.iterdir() if p.is_file()],flush=True)
+          import torch
+          from TTS.tts.utils import managers
+          manager_orig_load = managers.load_file
+          managers.load_file = lambda path: torch.load(str(path), map_location='cpu', weights_only=False) if str(path).endswith('.pth') else manager_orig_load(path)
+          print('Loaded speaker file keys:', list(torch.load(str(model/'speakers.pth'), map_location='cpu', weights_only=False).keys()), flush=True)
           from TTS.tts.utils.text import cleaners
           cleaners.pashto_grapheme_cleaners = lambda t: ' '.join(t.split())
           import runpy
